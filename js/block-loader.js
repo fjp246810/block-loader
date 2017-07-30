@@ -99,7 +99,7 @@ var BlockLoader = function () {
         },
         hideLoader: function () {
             Model.loader.fadeOut();
-            Model.target.remove(Model.loader);
+            Model.loader.remove();
             return this;
         }
     }
