@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <meta charset="utf-8"/>
+    <link href="css/block-loader.css" rel="stylesheet" type="text/css"/>
+    <title>web页面基于块的loading框，基于块的loader，js Loading框</title>
+</head>
+<body>
+
+<div id="container0" style="width: 500px; height: 300px; background-color: bisque;"></div>
+<div id="container1" style="width: 500px; height: 300px; background-color: burlywood;"></div>
+<div id="container2" style="width: 500px; height: 300px; background-color: bisque;"></div>
+<div id="container3" style="width: 500px; height: 300px; background-color: burlywood;"></div>
+<div id="container4" style="width: 500px; height: 300px; background-color: bisque;"></div>
+<div id="container5" style="width: 500px; height: 300px; background-color: burlywood;"></div>
+<div id="container6" style="width: 500px; height: 300px; background-color: bisque;"></div>
+
+<script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/block-loader.js"></script>
+<script type="text/javascript">
+    $(function () {
+        loader0 = BlockLoader();
+        loader0.loaderTarget("#container0").loaderStyle(0).showLoader();
+        loader1 = BlockLoader();
+        loader1.loaderTarget("#container1").loaderStyle(1).showLoader();
+        loader2 = BlockLoader();
+        loader2.loaderTarget("#container2").loaderStyle(2).showLoader();
+        loader3 = BlockLoader();
+        loader3.loaderTarget("#container3").loaderStyle(3).showLoader();
+        loader4 = BlockLoader();
+        loader4.loaderTarget("#container4").loaderStyle(4).showLoader();
+        loader5 = BlockLoader();
+        loader5.loaderTarget("#container5").loaderStyle(5).showLoader();
+        loader6 = BlockLoader();
+        loader6.loaderTarget("#container6").loaderStyle(6).showLoader();
+        setTimeout(function () {
+            loader0.hideLoader();
+        },2000);
+        setTimeout(function () {
+            loader1.hideLoader();
+        },4000);
+        setTimeout(function () {
+            loader2.hideLoader();
+        },6000);
+        setTimeout(function () {
+            loader3.hideLoader();
+        },8000);
+        setTimeout(function () {
+            loader4.hideLoader();
+        },10000);
+        setTimeout(function () {
+            loader5.hideLoader();
+        },12000);
+        setTimeout(function () {
+            loader6.hideLoader();
+        },14000);
+    });
+</script>
+</body>
+</html>
